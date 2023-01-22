@@ -4,11 +4,15 @@ let currentRoundNumber = 1;
 
 // Write your code below:
 
+// This function generates a random number between 0 and 9 (inclusive)
 function generateTarget() {
     return Math.floor(Math.random() * 10);
 }
 
 
+// This function compares the user's and computer's guesses to the target number
+// It returns true if the user's guess is closer to the target than the computer's guess
+// It returns false if the computer's guess is closer to the target than the user's guess
 function compareGuesses(user, computer, target) {
     /* if (user < 0 || user > 9) {
         return alert ('Please enter valid number');
@@ -24,6 +28,7 @@ function compareGuesses(user, computer, target) {
     }
 }
 
+// This function updates the score based on the winner of the round ('human' or 'computer')
 function updateScore(winner) {
     if (winner === 'human') {
         humanScore++;
@@ -33,6 +38,7 @@ function updateScore(winner) {
     return 'user ' + humanScore + ' computer ' + computerScore;
 }
 
+// This function advances the round number by 1
 function advanceRound() {
     currentRoundNumber++;
     return currentRoundNumber;
